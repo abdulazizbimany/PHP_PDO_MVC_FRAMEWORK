@@ -1,0 +1,43 @@
+Model View Controller (MVC)
+-> Model
+    => Interacts with database, (CRUD)
+    => Not interacts with UI | Data Processing
+    => Communicates with Controller and not View
+
+-> View
+    => The User Interface
+    => Languages (HTML5/CSS3/JS/XML etc)
+    => Contains Codes to show data to user & respond to events
+
+-> Controller
+    => Process the data after getting request from View and before updating anything to the database with Model
+    => Request from View, Update in Model
+
+-> The Main Folder Structure <-
+    |-> /public
+    |-> /app
+    |-> .htaccess file (to redirect to the /public when access the domain)
+
+    => /public (Main Application)
+        |-> index.php
+        |-> /JS
+        |-> /CSS
+        |-> .htaccess (redirect everything through index.php from /public)
+
+    => /app (Entire Application)
+        |-> /MVC directories
+        |-> /libraries (Heart of the app, all files must start with Uppercase letter)
+        |-> /helpers (eg: session helper file)
+        |-> /config  (Basic Stuffs like url root, app root)
+        |-> require.php file (requiring all necessary files created from /libraries)
+        |-> .htaccess file (to secure the application, the user should not access the /app)
+
+        //Explanations
+        => /libraries
+            |-> Core.php (can format URL)
+            |-> Database.php (Only Model access this file)
+            |-> Controller.php (Base Controller Class, extended by other controllers)
+
+        => /config
+            |-> config.php
+

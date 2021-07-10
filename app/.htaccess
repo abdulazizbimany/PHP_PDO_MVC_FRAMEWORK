@@ -1,0 +1,4 @@
+Options -Indexes
+#-> -Indexes = means does not allow to be accessed
+#-> +Indexes = means does allow to be accessed
+
